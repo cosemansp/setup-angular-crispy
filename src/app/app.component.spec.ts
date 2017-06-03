@@ -3,8 +3,6 @@ import { AppComponent } from './app.component';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr'
 import { EventAggregator } from './services/eventAggregator'
 
-import 'jasmine-matchers';
-
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
