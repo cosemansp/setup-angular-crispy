@@ -176,6 +176,10 @@ acorn@^5.0.0:
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.0.3.tgz#c460df08491463f028ccb82eab3730bf01087b3d"
 
+add-matchers@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/add-matchers/-/add-matchers-0.5.0.tgz#502190e4750cd5721618393268b61a157366e765"
+
 ajv-keywords@^1.1.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-1.5.1.tgz#314dd0a4b3368fad3dfcdc54ede6171b886daf3c"
@@ -2470,6 +2474,12 @@ istanbul-reports@^1.1.1:
   dependencies:
     handlebars "^4.0.3"
 
+jasmine-expect@^3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/jasmine-expect/-/jasmine-expect-3.7.0.tgz#841e1382f4bff0258c8dc96eca27c4fbc6ae4887"
+  dependencies:
+    add-matchers "0.5.0"
+
 jest-changed-files@^20.0.3:
   version "20.0.3"
   resolved "https://registry.yarnpkg.com/jest-changed-files/-/jest-changed-files-20.0.3.tgz#9394d5cc65c438406149bef1bf4d52b68e03e3f8"
@@ -2953,6 +2963,10 @@ lodash@^4.0.0, lodash@^4.11.1, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.2, l
 lodash@~4.16.4:
   version "4.16.6"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.16.6.tgz#d22c9ac660288f3843e16ba7d2b5d06cca27d777"
+
+logplease@^1.2.13:
+  version "1.2.13"
+  resolved "https://registry.yarnpkg.com/logplease/-/logplease-1.2.13.tgz#21a6dac4bdf029084d6718239c69dd937b931b2f"
 
 longest@^1.0.1:
   version "1.0.1"

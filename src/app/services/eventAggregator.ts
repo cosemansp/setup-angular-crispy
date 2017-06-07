@@ -33,3 +33,5 @@ export class EventAggregator {
     this.subject.unsubscribe();
   }
 }
+
+export default new EventAggregator();

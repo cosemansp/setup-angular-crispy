@@ -1,9 +1,12 @@
 import 'jest-preset-angular';
+import 'jasmine-expect';
+import * as Logger from 'logplease';
 import { componentFixtureSerializer } from './test/jest/componentFixtureSerizalizer'
 
-// additional matchers
-// jasmine-object-matchers-jest
+// disable all logging
+Logger.setLogLevel('NONE')
 
+// mock local & session storage
 const mock = () => {
   let storage = {};
   return {
@@ -20,5 +23,6 @@ Object.defineProperty(window, 'getComputedStyle', {
   value: () => ['-webkit-appearance']
 });
 
+// add custom component serializer for snapshots
 expect.addSnapshotSerializer(componentFixtureSerializer);
 

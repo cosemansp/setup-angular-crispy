@@ -1,23 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AppComponent should compile successfully 1`] = `
-<app-root
-  eventAggregator={[Function EventAggregator]}
-  message={[Function String]}
-  toastr={[Function Object]}
->
-  <div
-    class="container"
-  >
-    <h1>
-      App Works!
-    </h1>
-    <i
-      aria-hidden="true"
-      class="fa fa-thumbs-o-up fa-5x"
-    >
-      
-    </i>
-  </div>
-</app-root>
+<div class="container">
+  <h1> App Works! </h1>
+  <i aria-hidden="true" class="fa fa-thumbs-o-up fa-5x"> </i>
+</div>
 `;

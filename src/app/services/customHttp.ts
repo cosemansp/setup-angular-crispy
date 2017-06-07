@@ -8,7 +8,7 @@ import {
 } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { EventAggregator } from './eventAggregator';
+import eventAggregator from './eventAggregator';
 
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/timeout';
@@ -21,8 +21,7 @@ import 'rxjs/add/operator/delay';
 @Injectable()
 export class CustomHttp extends Http {
   constructor(backend: ConnectionBackend,
-              defaultOptions: RequestOptions,
-              private eventAggregator: EventAggregator) {
+              defaultOptions: RequestOptions) {
     super(backend, defaultOptions);
   }
 
@@ -31,7 +30,7 @@ export class CustomHttp extends Http {
     return super.request(url, options)
       .let(handleErrorAndRetry)
       .catch(error => {
-        this.eventAggregator.publish('ERROR', error);
+        eventAggregator.publish('ERROR', error);
         return Observable.throw(error);
       });
   }

@@ -7,11 +7,12 @@ import { ToastModule } from 'ng2-toastr/ng2-toastr'
 import { ToastOptions } from 'ng2-toastr'
 
 import { AppComponent } from './app.component';
-import { EventAggregator } from './services/eventAggregator';
 import { CustomHttp } from './services/customHttp'
 
-export function createHttp(backend: XHRBackend, options: RequestOptions, eventAggregator: EventAggregator) {
-    return new CustomHttp(backend, options, eventAggregator);
+import eventAggregator from './services/eventAggregator';
+
+export function createHttp(backend: XHRBackend, options: RequestOptions) {
+    return new CustomHttp(backend, options);
 };
 
 @NgModule({
@@ -25,11 +26,10 @@ export function createHttp(backend: XHRBackend, options: RequestOptions, eventAg
     ToastModule.forRoot(),
   ],
   providers: [
-    EventAggregator,
     {
         provide: Http,
         useFactory: createHttp,
-        deps: [XHRBackend, RequestOptions, EventAggregator],
+        deps: [XHRBackend, RequestOptions],
     }
   ],
   bootstrap: [AppComponent]
