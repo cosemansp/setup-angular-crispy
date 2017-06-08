@@ -1,12 +1,9 @@
 
 import { ToastsManager } from 'ng2-toastr/ng2-toastr'
 import { Component, ViewContainerRef } from '@angular/core';
-import * as Logger from 'logplease';
-import { environment } from 'environments/environment';
+
 
 import eventAggregator from 'app/services/eventAggregator';
-
-const log = Logger.create('AppComponent');
 
 @Component({
   selector: 'app-root',
@@ -26,8 +23,6 @@ export class AppComponent {
         console.error(error)
         toastr.error(error, 'Oops')
       })
-
-    log.info('App Started', environment)
   }
 }
 

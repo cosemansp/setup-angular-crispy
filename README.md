@@ -49,6 +49,7 @@ For Internationalization
 Logging
 
 - [nightingale](https://github.com/nightingalejs/nightingale): Univeral Javscript logging like NLog
+- [js-logger](https://www.npmjs.com/package/js-logger)
 
 ## Explorer bundle size
 

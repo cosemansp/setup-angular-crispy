@@ -1,10 +1,6 @@
 import 'jest-preset-angular';
 import 'jasmine-expect';
-import * as Logger from 'logplease';
 import { componentFixtureSerializer } from './test/jest/componentFixtureSerizalizer'
-
-// disable all logging
-Logger.setLogLevel('NONE')
 
 // mock local & session storage
 const mock = () => {
