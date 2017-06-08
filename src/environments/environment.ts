@@ -9,6 +9,7 @@ import * as Logger from 'js-logger';
 export const environment = {
   production: false,
   name: 'dev',
+  version: '0.2.0',
 
   // hot module reload (enable for develop)
   hmr: true,

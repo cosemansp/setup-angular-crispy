@@ -6,6 +6,7 @@ import * as Logger from 'js-logger';
 export const environment = {
   production: true,
   name: 'prod',
+  version: '0.2.0',
 
   // hot module reload (must be disable in production !)
   hmr: false,
