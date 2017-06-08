@@ -1,5 +1,5 @@
 import 'jest-preset-angular';
-import 'jasmine-expect';
+import 'jasmine-expect';  // additional jasmine machters
 import { componentFixtureSerializer } from './test/jest/componentFixtureSerizalizer'
 
 // mock local & session storage

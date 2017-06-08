@@ -1,5 +1,5 @@
 //
-// Helpers to get correct values
+// Helpers to get correct values when octopus replacement tags are used
 //
 
 export function setValue(substitute: any, defaultValue: String | Boolean | Number) {

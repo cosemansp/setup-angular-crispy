@@ -1,20 +1,20 @@
 {
-  "name": "xerius",
+  "name": "angular-crispy",
   "version": "0.2.1",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
     "serve": "ng serve --hmr --open",
     "serve:simple": "ng serve",
-    "build": "npm run bumpVersion && ng build",
-    "build:prod": "npm run bumpVersion && ng build --target=production --environment=prod --output-path=dist-prod",
+    "build": "npm run setVersion && ng build",
+    "build:prod": "npm run setVersion && ng build --target=production --environment=prod --output-path=dist-prod",
     "build:prod:sourcemaps": "npm run build:prod -- --sourcemap",
     "test": "jest --watch",
     "test:ci": "jest",
     "lint": "ng lint --type-check --format=stylish",
     "cleanup": "rimraf dist* yarn-error.log",
     "explore": "source-map-explorer",
-    "bumpVersion": "node ./scripts/setVersion.js"
+    "setVersion": "node ./scripts/setVersion.js"
   },
   "private": true,
   "dependencies": {
@@ -39,6 +39,7 @@
     "@angular/cli": "1.1.0",
     "@angular/compiler-cli": "^4.0.0",
     "@angular/language-service": "^4.0.0",
+    "@types/jest": "^19.2.4",
     "@types/node": "^7.0.29",
     "cheerio": "^1.0.0-rc.1",
     "codelyzer": "~3.0.1",
@@ -57,9 +58,6 @@
   "jest": {
     "verbose": false,
     "preset": "jest-preset-angular",
-    "unmockedModulePathPatterns": [
-      "jasmine-matchers"
-    ],
     "setupTestFrameworkScriptFile": "<rootDir>/src/setupJest.ts",
     "transformIgnorePatterns": [
       "node_modules/(?!@ngrx|ngx-http-test)"

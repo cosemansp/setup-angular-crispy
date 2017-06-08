@@ -1,6 +1,6 @@
-import { setValue } from './helper'
+import { setValue } from './octopusHelper'
 
-describe('environmentHelper', () => {
+describe('octopusHelper', () => {
   describe('setValue', () => {
     test('string', () => {
       expect(setValue('#{test}', 'abc')).toBe('abc')

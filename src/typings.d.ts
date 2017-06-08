@@ -4,6 +4,5 @@ interface NodeModule {
   id: string;
 }
 
+// allows "require('myLib')" in typescript
 declare var require: any
-
-// declare var require: NodeRequire;

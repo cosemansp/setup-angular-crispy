@@ -3,13 +3,12 @@
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
-import { setValue } from './helper'
 import * as Logger from 'js-logger';
 
 export const environment = {
   production: false,
   name: 'dev',
-  version: '0.2.0',
+  version: '0.2.1',
 
   // hot module reload (enable for develop)
   hmr: true,

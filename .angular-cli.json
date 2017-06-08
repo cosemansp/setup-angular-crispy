@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "xerius"
+    "name": "angular-crispy"
   },
   "apps": [
     {
@@ -25,9 +25,7 @@
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts",
-        "hmr": "environments/environment.hmr.ts",
-        "octopus": "environments/environment.octopus.ts"
+        "prod": "environments/environment.prod.ts"
       }
     }
   ],
