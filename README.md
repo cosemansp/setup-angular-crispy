@@ -33,6 +33,7 @@ THIS IS WORK IN PROGRESS
 | lint                  	| Lint all source files                             	|
 | cleanup               	| Remove all generated files & folders              	|
 | explore               	| Open source map explorer to verify bundle sizes   	|
+| setVersion              | Copy version from package.json and inject into env  |
 
 ## Suggestions
 
@@ -48,7 +49,6 @@ For Internationalization
 
 Logging
 
-- [nightingale](https://github.com/nightingalejs/nightingale): Univeral Javscript logging like NLog
 - [js-logger](https://www.npmjs.com/package/js-logger)
 
 ## Explorer bundle size

@@ -5,7 +5,9 @@ import { ReactiveFormsModule } from '@angular/forms'
 import { ToastModule } from 'ng2-toastr/ng2-toastr'
 import { ToastOptions } from 'ng2-toastr'
 import * as Logger from 'js-logger';
+
 import { environment } from 'environments/environment';
+import { local } from './core/storage'
 
 // components
 import { AppComponent } from './app.component';
@@ -49,6 +51,9 @@ export class AppModule {
     const log = Logger.get('app');
     log.info('Started')
     log.info('Config', JSON.stringify(environment, null, '\t'))
+
+    // setup localStorage prefix
+    local.prefix = 'myApp'
   }
 }
 
