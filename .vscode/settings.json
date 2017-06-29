@@ -1,3 +1,18 @@
 // Place your settings in this file to overwrite default and user settings.
 {
+  "editor.formatOnSave": true,
+  "json.format.enable": false,
+
+  "prettier.useTabs": false,
+  "prettier.printWidth": 120,
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "prettier.semi": true,
+  "prettier.jsonEnable": [], // disable json (not supporting comments in JSON)
+  "prettier.cssEnable": [
+    "css",
+    "less",
+    "scss"
+  ]
 }

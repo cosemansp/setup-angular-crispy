@@ -4,7 +4,7 @@ import {
   ConnectionBackend,
   RequestOptionsArgs,
   Request,
-  Response
+  Response,
 } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
@@ -20,19 +20,19 @@ import 'rxjs/add/operator/delay';
 
 @Injectable()
 export class CustomHttp extends Http {
-  constructor(backend: ConnectionBackend,
-              defaultOptions: RequestOptions) {
+  constructor(backend: ConnectionBackend, defaultOptions: RequestOptions) {
     super(backend, defaultOptions);
   }
 
-  request(url: string | Request, options?: RequestOptionsArgs): Observable<Response> {
+  request(
+    url: string | Request,
+    options?: RequestOptionsArgs,
+  ): Observable<Response> {
     console.log('request...');
-    return super.request(url, options)
-      .let(handleErrorAndRetry)
-      .catch(error => {
-        eventAggregator.publish('ERROR', error);
-        return Observable.throw(error);
-      });
+    return super.request(url, options).let(handleErrorAndRetry).catch(error => {
+      eventAggregator.publish('ERROR', error);
+      return Observable.throw(error);
+    });
   }
 
   // get(url: string, options?: RequestOptionsArgs): Observable<Response> {
@@ -67,4 +67,3 @@ function castError(error: Response | any): Observable<string> {
   }
   return Observable.throw('No Internet');
 }
-

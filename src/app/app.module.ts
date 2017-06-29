@@ -1,33 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule, Http, XHRBackend, RequestOptions } from '@angular/http';
-import { ReactiveFormsModule } from '@angular/forms'
-import { ToastModule } from 'ng2-toastr/ng2-toastr'
-import { ToastOptions } from 'ng2-toastr'
+import { ReactiveFormsModule } from '@angular/forms';
+import { ToastModule } from 'ng2-toastr/ng2-toastr';
+import { ToastOptions } from 'ng2-toastr';
 import * as Logger from 'js-logger';
 
 import { environment } from 'environments/environment';
-import { local } from './core/storage'
+import { local } from './core/storage';
 
 // components
 import { AppComponent } from './app.component';
 import { SampleComponent } from './components/sample.component';
 
 // services
-import { CustomHttp } from './services/customHttp'
+import { CustomHttp } from './services/customHttp';
 
 // core services
 import eventAggregator from './services/eventAggregator';
 
 export function createHttp(backend: XHRBackend, options: RequestOptions) {
-    return new CustomHttp(backend, options);
-};
+  return new CustomHttp(backend, options);
+}
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SampleComponent,
-  ],
+  declarations: [AppComponent, SampleComponent],
   imports: [
     BrowserModule,
     HttpModule,
@@ -36,12 +33,12 @@ export function createHttp(backend: XHRBackend, options: RequestOptions) {
   ],
   providers: [
     {
-        provide: Http,
-        useFactory: createHttp,
-        deps: [XHRBackend, RequestOptions],
-    }
+      provide: Http,
+      useFactory: createHttp,
+      deps: [XHRBackend, RequestOptions],
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
   constructor() {
@@ -49,11 +46,10 @@ export class AppModule {
     Logger.useDefaults();
     Logger.setLevel(environment.logLevel);
     const log = Logger.get('app');
-    log.info('Started')
-    log.info('Config', JSON.stringify(environment, null, '\t'))
+    log.info('Started');
+    log.info('Config', JSON.stringify(environment, null, '\t'));
 
     // setup localStorage prefix
-    local.prefix = 'myApp'
+    local.prefix = 'myApp';
   }
 }
-

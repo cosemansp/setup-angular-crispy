@@ -6,9 +6,5 @@
     "baseUrl": "",
     "types": []
   },
-  "exclude": [
-    "setupJest.ts",
-    "**/*.spec.ts",
-    "**/*.sample.ts"
-  ]
+  "exclude": ["setupJest.ts", "**/*.spec.ts", "**/*.sample.ts"]
 }

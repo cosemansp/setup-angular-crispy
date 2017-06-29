@@ -25,5 +25,3 @@ export const environment = {
   // request timeout
   mySwitch: false,
 };
-
-

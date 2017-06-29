@@ -24,7 +24,7 @@ export class EventAggregator {
 
   listen(type: String) {
     return this.subject
-      .filter((event) => event.type === type)
+      .filter(event => event.type === type)
       .map(event => event.data)
       .share();
   }

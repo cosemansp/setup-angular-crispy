@@ -13,11 +13,7 @@ const log = Logger.get('sampleComponent');
 export class SampleComponent implements OnInit {
   @Input() user;
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 }
-

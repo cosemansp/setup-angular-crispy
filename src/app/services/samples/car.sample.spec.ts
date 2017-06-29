@@ -7,7 +7,7 @@ describe('Car', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [Engine, Car]
+      providers: [Engine, Car],
     });
     jest.spyOn(Engine.prototype, 'getHorsePower').mockReturnValue(400);
     jest.spyOn(Engine.prototype, 'getName').mockReturnValue('V8 engine');
@@ -16,10 +16,11 @@ describe('Car', () => {
     jest.resetAllMocks();
   });
 
-
-  beforeEach(inject([Car], (car: Car) => {
-    subject = car;
-  }));
+  beforeEach(
+    inject([Car], (car: Car) => {
+      subject = car;
+    }),
+  );
 
   it('should display name with engine', () => {
     expect(subject.getName()).toBe('Car with V8 engine(400 HP)');
