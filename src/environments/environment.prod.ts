@@ -28,8 +28,8 @@ export const environment = {
   apiUrlBase: setValue('#{apiUrlBase}', 'http://localhost:2000'),
 
   // request timeout
-  // requestTimeout: setValue('#{requestTimeout}', 2000),
+  requestTimeout: setValue('#{requestTimeout}', 2000),
 
   // request timeout
-  // mySwitch: setValue('#{mySwitch}', false)
+  mySwitch: setValue('#{mySwitch}', false),
 };

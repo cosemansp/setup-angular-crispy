@@ -8,7 +8,8 @@ import * as Logger from 'js-logger';
 export const environment = {
   production: false,
   name: 'dev',
-  version: '0.2.1',
+  version: '0.3.0',
+  appName: 'myApp', // used for local & session storage
 
   // hot module reload (enable for develop)
   hmr: true,
@@ -17,7 +18,7 @@ export const environment = {
   logLevel: Logger.DEBUG,
 
   // root URL for application server
-  apiUrlBase: 'http://localhost:2000',
+  apiUrlBase: 'http://localhost:3000',
 
   // request timeout
   requestTimeout: 2000,
